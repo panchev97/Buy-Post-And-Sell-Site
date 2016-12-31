@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="Functionality/Application.js"></script>
+	<script src="Functionality/Nortifications/ErrorBox.js"></script>
+	<script src="Functionality/Nortifications/InfoBox.js"></script>
+	<script src="Functionality/Nortifications/LoadingBox.js"></script>
+	<script src="Functionality/Errors/HandleAjaxError.js"></script>
+	<link rel="stylesheet" href="Styles/NortificationStyles/ErrorBoxStyle.css">
+	<link rel="stylesheet" href="Styles/NortificationStyles/InfoBoxStyle.css">
+	<link rel="stylesheet" href="Styles/NortificationStyles/LoadingBoxStyle.css">
+	<link rel="stylesheet" href="Styles/PagesStyle/RegistrationPageStyle.css">
+	<link rel="stylesheet" href="Styles/PagesStyle/LoginPageStyle.css">
+	<script src="Functionality/Constants/Constants.js"></script>
+	<script src="Functionality/Controllers/CreateItemController.js"></script>
+	<script src="Functionality/Controllers/HideUsersController.js"></script>
+	<script src="Functionality/Controllers/ListItemsController.js"></script>
+	<script src="Functionality/Controllers/ListUsersController.js"></script>
+	<script src="Functionality/Controllers/LoginUserController.js"></script>
+	<script src="Functionality/Controllers/LogoutUserController.js"></script>
+	<script src="Functionality/Controllers/RegisterUserController.js"></script>
+	<script src="Functionality/Models/CreateItemModel.js"></script>
+	<script src="Functionality/Models/ListItemsModel.js"></script>
+	<script src="Functionality/Models/ListUsersModel.js"></script>
+	<script src="Functionality/Models/LoginUserModel.js"></script>
+	<script src="Functionality/Models/RegisterUserModel.js"></script>
+	<script src="Functionality/Errors/HandleAjaxError.js"></script>
+    <title>Login</title>
+</head>
+<body onload="startApplication()">
+
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1>Buy & Sell Items</h1>
+		<p>It's Hard To Find Things That Won't Buy or Sell Online</p>
+	</div>
+</div>
+<section id="loadingBox" class="loadingBox" hidden>Loading ...</section>
+
+<section id="infoBox" class="infoBox" hidden>Info</section>
+
+<section id="errorBox" class="errorBox" hidden>Error</section>
+
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav"id="nav">
+				<li><a href="HomePage.html" id="homepageLink">Home</a></li>
+				<li class="active"><a href="Login.html" id="loginLink">Login</a></li>
+				<li><a href="Registration.html" id="registrationLink">Registration</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+    <section id="login">
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+                <h1>Log in with your username</h1>
+                    <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="usernameLogin" class="sr-only">Username</label>
+                            <input type="text" name="username" id="usernameLogin" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <label for="passwordLogin" class="sr-only">Password</label>
+                            <input type="password" name="key" id="passwordLogin" class="form-control" placeholder="Password">
+                        </div>
+                       
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Log in">
+                    </form>
+                    <hr>
+        	    </div>
+    		</div>
+    	</div>
+    </div>
+</section>
+		<footer class="container-fluid text-center">
+			<p>Emil & Rumen Buy&Sell Site.&copy; No Rights Reserved</p>
+        </footer>
+</body>
+</html>

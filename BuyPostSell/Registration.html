@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="Functionality/Application.js"></script>
+	<script src="Functionality/Nortifications/ErrorBox.js"></script>
+	<script src="Functionality/Nortifications/InfoBox.js"></script>
+	<script src="Functionality/Nortifications/LoadingBox.js"></script>
+	<script src="Functionality/Errors/HandleAjaxError.js"></script>
+	<link rel="stylesheet" href="Styles/NortificationStyles/ErrorBoxStyle.css">
+	<link rel="stylesheet" href="Styles/NortificationStyles/InfoBoxStyle.css">
+	<link rel="stylesheet" href="Styles/NortificationStyles/LoadingBoxStyle.css">
+	<link rel="stylesheet" href="Styles/PagesStyle/RegistrationPageStyle.css">
+	<script src="Functionality/Constants/Constants.js"></script>
+	<script src="Functionality/Controllers/CreateItemController.js"></script>
+	<script src="Functionality/Controllers/HideUsersController.js"></script>
+	<script src="Functionality/Controllers/ListItemsController.js"></script>
+	<script src="Functionality/Controllers/ListUsersController.js"></script>
+	<script src="Functionality/Controllers/LoginUserController.js"></script>
+	<script src="Functionality/Controllers/LogoutUserController.js"></script>
+	<script src="Functionality/Controllers/RegisterUserController.js"></script>
+	<script src="Functionality/Models/CreateItemModel.js"></script>
+	<script src="Functionality/Models/ListItemsModel.js"></script>
+	<script src="Functionality/Models/ListUsersModel.js"></script>
+	<script src="Functionality/Models/LoginUserModel.js"></script>
+	<script src="Functionality/Models/RegisterUserModel.js"></script>
+	<script src="Functionality/Errors/HandleAjaxError.js"></script>
+    <title>Registration</title>
+</head>
+<body onload="startApplication()">
+<div class="jumbotron">
+	<div class="container text-center">
+		<h1>Buy & Sell Items</h1>
+		<p>It's Hard To Find Things That Won't Buy or Sell Online</p>
+	</div>
+</div>
+<section id="loadingBox" class="loadingBox" hidden>Loading ...</section>
+
+<section id="infoBox" class="infoBox" hidden>Info</section>
+
+<section id="errorBox" class="errorBox" hidden>Error</section>
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			</button>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="nav navbar-nav"id="nav">
+				<li><a href="HomePage.html" id="homepageLink">Home</a></li>
+				<li><a href="Login.html" id="loginLink">Login</a></li>
+				<li class="active"><a href="Registration.html" id="registrationLink">Registration</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+    <div class="container">
+        <div class="row centered-form">
+			<center>
+				<h5><b>Info: <i>The Username Must Be At Least 3 And Within 10 Characters</i></b></h5>
+					<h5><b>Info: <i>The First And Last Names Cannot Be Empty Fields</i></b></h5>
+				<h5><b>Info: <i>The Password And Confirmation Password Fields Must Match</i></b></h5>
+				<hr>
+			</center>
+        <div class="col-xs-12 col-sm-8 col-md-4 col-sm-offset-2 col-md-offset-4">
+        	<div class="panel panel-default">
+        		<div class="panel-heading">
+			    		<h3 class="panel-title">Welcome to the Store</h3>
+			 			</div>
+			 			<div class="panel-body">
+			    		<form role="form">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" name="first_name" id="first_name" class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" name="last_name" id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<div class="form-group">
+			    				<input type="text" name="username" id="username" class="form-control input-sm" placeholder="Username">
+			    			</div>
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password" id="password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password" name="password_confirmation" id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			<input type="submit" value="Register" class="btn btn-info btn-block" id="btnRegister">
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+    </div>
+<footer class="container-fluid text-center">
+	<p>Emil & Rumen Buy&Sell Site.&copy; No Rights Reserved</p>
+</footer>
+</body>
+</html>

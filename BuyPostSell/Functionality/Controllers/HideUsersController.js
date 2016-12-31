@@ -1,0 +1,3 @@
+function hideUserList() {
+    $("#users").hide();
+}

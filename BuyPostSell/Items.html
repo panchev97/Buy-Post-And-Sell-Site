@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Items</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="Functionality/Application.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="Functionality/Nortifications/ErrorBox.js"></script>
+    <script src="Functionality/Nortifications/InfoBox.js"></script>
+    <script src="Functionality/Nortifications/LoadingBox.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Styles/PagesStyle/ItemsPageStyle.css">
+    <script src="Functionality/Constants/Constants.js"></script>
+    <script src="Functionality/Controllers/CreateItemController.js"></script>
+    <script src="Functionality/Controllers/HideUsersController.js"></script>
+    <script src="Functionality/Controllers/ListItemsController.js"></script>
+    <script src="Functionality/Controllers/ListUsersController.js"></script>
+    <script src="Functionality/Controllers/LoginUserController.js"></script>
+    <script src="Functionality/Controllers/LogoutUserController.js"></script>
+    <script src="Functionality/Controllers/RegisterUserController.js"></script>
+    <script src="Functionality/Models/CreateItemModel.js"></script>
+    <script src="Functionality/Models/ListItemsModel.js"></script>
+    <script src="Functionality/Models/ListUsersModel.js"></script>
+    <script src="Functionality/Models/LoginUserModel.js"></script>
+    <script src="Functionality/Models/RegisterUserModel.js"></script>
+    <script src="Functionality/Errors/HandleAjaxError.js"></script>
+    <style>
+        table{border-collapse:collapse;}
+        th,td{border:1px solid #595a59;}
+        th{font-weight:bold;text-align:left;color:white;background: #0a060d;}
+        td{padding:5px;}
+        tr:nth-child(odd){background:aliceblue;}
+        tr>td:nth-child(4){text-align:right;}
+    </style>
+</head>
+<body onload="startApplication()">
+<script>
+    $(document).ready( function () {
+        listItems();
+    })
+</script>
+<div class="jumbotron">
+    <div class="container text-center">
+        <h1>Buy & Sell Items</h1>
+        <p>It's Hard To Find Things That Won't Buy or Sell Online</p>
+    </div>
+</div>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav"id="nav">
+                <li><a href="HomePage.html" id="homepageLink">Home</a></li>
+                <li><a href="Login.html" id="loginLink">Login</a></li>
+                <li><a href="Registration.html" id="registrationLink">Registration</a></li>
+                <li class="active"><a href="Items.html" id="itemsLink">Items</a></li>
+                <li><a href="Users.html" id="usersLink">List Of Users</a></li>
+                <li><a href="CreateAd.html" id="createAd">Create Advertisement</a></li>
+                <li><a href="#" id="logout">Logout</a></li>
+            </ul>
+            </ul>
+        </div>
+    </div>
+</nav>
+<center>
+    <div class="container" id="items">
+        <table><thead>
+        <th>Product</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Telephone Number</th>
+        </thead><tbody>
+        <tr>
+            <td>Laptop Dell</td>
+            <td>Very good laptop with 12Gb RAM</td>
+            <td>2100</td>
+            <td>123-456-7890</td>
+        </tr>
+        <tr>
+            <td>Sony TV</td>
+            <td>High Performance Ferrite Heads</td>
+            <td>2100</td>
+            <td>123-456-7890</td>
+        </tr>
+        </tbody></table>
+    </div>
+    <br>
+    <br>
+    <br>
+<footer class="container-fluid text-center">
+    <p>Emil & Rumen Buy&Sell Site.&copy; No Rights Reserved</p>
+</footer>
+</body>
+</html>
